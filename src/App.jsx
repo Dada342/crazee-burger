@@ -1,24 +1,8 @@
-import { useState } from 'react';
+import './App.css'
+import LoginPage from '../components/pages/login/LoginPage'
 
 function App() {
-  //state (état, données)
-  const [prenom, setPrenom] = useState('David');
-  const [count, setCount] = useState(1);
-
-  // comportement
-  const handleClick = () => {
-    //alert('handleClick');
-    setCount(count + 1)
-  }
-
-  // Affichage (render)
-  return (
-    <div>
-      <h1>Bonjour {prenom}</h1>
-      <p>{count}</p>
-      <button onClick={handleClick} >Incrémenter</button>
-    </div>
-  );
+  return <LoginPage />
 }
 
 export default App;
