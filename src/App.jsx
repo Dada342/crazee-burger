@@ -1,8 +1,17 @@
-import './App.css'
-import LoginPage from '../components/pages/login/LoginPage'
+import './App.css';
+import LoginPage from '../components/pages/login/LoginPage';
+import OrderPage from '../components/pages/order/OrderPage';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
-  return <LoginPage />
+  return (
+    <div>
+      <Routes>
+        <Route path="login" element={ <LoginPage/> } />
+        <Route path="commande" element={ <OrderPage/> } />
+      </Routes>
+    </div>
+  );
 }
 
 export default App;
