@@ -4,7 +4,7 @@ export default function ErrorPage() {
   let navigate = useNavigate() 
 
   const handleSubmit = () => { 
-    navigate("/login")
+    navigate("/")
    }
 
   return (
