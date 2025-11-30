@@ -1,11 +1,10 @@
-import React from 'react'
 import { useNavigate, useParams } from 'react-router';
 
 export default function OrderPage() {
   
   let navigate = useNavigate();
   let {name} = useParams()
-  
+
   const handleSubmit = () => { 
     navigate("/login")
    }
