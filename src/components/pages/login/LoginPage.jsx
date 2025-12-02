@@ -13,10 +13,25 @@ export default function LoginPage() {
 }
 
 const LoginPageStyled = styled.div`
-  background: red;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-item: center;
+
+  ::before{
+  content: "";
+  background: url("/images/burger-background.jpg"), rgba(0, 0, 0, 0.5);
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  }
 `;
