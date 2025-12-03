@@ -14,10 +14,11 @@ export default function LoginPage() {
 
 const LoginPageStyled = styled.div`
   height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-item: center;
+  align-items: center;
 
   ::before{
   content: "";
