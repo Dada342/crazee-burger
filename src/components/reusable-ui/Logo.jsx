@@ -11,10 +11,10 @@ export default function Logo() {
 }
 
 const LogoStyled = styled.div`
-  border: 1px solid red;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100px;
 
   h1 {
   display: inline;
