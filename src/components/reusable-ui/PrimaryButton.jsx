@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../../theme";
 
 export default function PrimaryButton({ label, Icon }) {
   return (
@@ -10,33 +11,39 @@ export default function PrimaryButton({ label, Icon }) {
 }
 
 const PrimaryButtonStyled = styled.button`
-  
-    width: 100%;
-    border: 1px solid red;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    white-space: nowrap;
-    text-decoration: none;
-    line-height: 1;
+  width: 100%;
+  border: 1px solid red;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  white-space: nowrap;
+  text-decoration: none;
+  line-height: 1;
 
-    padding: 18px 24px;
-    border-radius: 5px;
-    font-size: 15px;
-    font-weight: 800;
-    color: white;
-    background-color: #ff9f1b;
-    border: 1px solid #ff9f1b;
+  padding: 18px 24px;
+  border-radius: ${theme.borderRadius.round};
+  font-size: ${theme.fonts.size.P0};
+  font-weight: ${theme.fonts.weights.heavy};
+  //color: ${theme.colors.white};
+  background-color: ${theme.colors.primary_burger};
+  border: 1px solid ${theme.colors.primary_burger};
 
-    &:active {
-      color: white;
-      background-color: #ff9f1b;
-      border: 1px solid #ff9f1b;
-    }
+  &:hover:not(:disabled) {
+    background-color: ${theme.colors.white};
+    color: ${theme.colors.primary_burger};
+    border: ${theme.colors.primary_burger};
+    transition: all 200ms ease-out;
+  }
 
-    &:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-    }
+  &:active {
+    color: ${theme.colors.white};
+    background-color: ${theme.colors.primary_burger};
+    border: 1px solid ${theme.colors.primary_burger};
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
 `;
